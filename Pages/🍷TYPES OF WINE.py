@@ -1,12 +1,11 @@
 import streamlit as st
 
-import streamlit as st
-
 # Add custom CSS to style the buttons
 st.markdown("""
 <style>
 .sidebar .widget>div>div>div>button {
     width: 100%; /* Set a fixed width for the buttons */
+    padding: 8px; /* Add padding for better appearance */
 }
 </style>
 """, unsafe_allow_html=True)
