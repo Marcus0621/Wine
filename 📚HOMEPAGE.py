@@ -2,7 +2,7 @@
 
 import streamlit as st
 from PIL import Image
-import TYPES_OF_WINE  # Importing the types of wine script
+from Pages import TYPES_OF_WINE
 
 def main():
     st.title("WELCOME TO THE WORLD OF WINE!")
