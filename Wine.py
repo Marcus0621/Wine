@@ -32,4 +32,5 @@ if any([button1, button2, button3, button4, button5, button6]):
         st.title("Dessert Wine Information")
     elif button6:
         st.title("Sparkling Wine Information")
+        st.write("Ops")
         
