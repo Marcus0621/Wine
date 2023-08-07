@@ -9,10 +9,6 @@ button6 = st.sidebar.button("SPARKLING WINE")
 
 
 if any([button1, button2, button3, button4, button5, button6]):
-    # welcome_title.empty()
-    # image_placeholder.empty()
-    # caption_placeholder.empty()
-
     if button1:
         st.title("Red Wine Information")
     elif button2:
