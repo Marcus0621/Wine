@@ -1,7 +1,7 @@
 # main.py
 
 import streamlit as st
-from TYPES_OF_WINE import display_wine_types
+from TYPES_OF_WINE import  display_wine_types
 from HOMEPAGE import display_homepage
 
 # Create a sidebar navigation option
