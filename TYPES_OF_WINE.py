@@ -23,3 +23,5 @@ def display_wine_types():
             st.title("Dessert Wine Information")
         elif button6:
             st.title("Sparkling Wine Information")
+            
+            
