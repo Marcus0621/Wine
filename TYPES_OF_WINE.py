@@ -1,6 +1,7 @@
 # TYPES_OF_WINE.py
 
 import streamlit as st
+from RED_WINE import red_intro, cab, merlot
 
 def display_wine_types():
     button1 = st.sidebar.button("RED WINE")
@@ -12,7 +13,10 @@ def display_wine_types():
 
     if any([button1, button2, button3, button4, button5, button6]):
         if button1:
-            st.title("Red Wine Information")
+            st.title("INTO THE WORLD OF RED WINE")
+            red_intro()
+            cab()
+            merlot()
         elif button2:
             st.title("White Wine Information")
         elif button3:
