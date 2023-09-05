@@ -1,31 +1,25 @@
-# TYPES_OF_WINE.py
-
 import streamlit as st
-from RED_WINE import red_intro, cab, merlot
+from RED_WINE import red_intro, cab, merlot, shiraz
 
 def display_wine_types():
-    button1 = st.sidebar.button("RED WINE")
-    button2 = st.sidebar.button("WHITE WINE")
-    button3 = st.sidebar.button("ROSE WINE")
-    button4 = st.sidebar.button("AMBER WINE")
-    button5 = st.sidebar.button("DESSERT WINE")
-    button6 = st.sidebar.button("SPARKLING WINE")
+    wine_type = st.sidebar.radio("**Select a Wine Type**", ["RED WINE", "WHITE WINE", "ROSE WINE", "AMBER WINE", "DESSERT WINE", "SPARKLING WINE"])
 
-    if any([button1, button2, button3, button4, button5, button6]):
-        if button1:
+    if wine_type:
+        if wine_type == "RED WINE":
             st.title("INTO THE WORLD OF RED WINE")
             red_intro()
             cab()
             merlot()
-        elif button2:
+            shiraz()
+        elif wine_type == "WHITE WINE":
             st.title("White Wine Information")
-        elif button3:
+        elif wine_type == "ROSE WINE":
             st.title("Rosé Wine Information")
-        elif button4:
+        elif wine_type == "AMBER WINE":
             st.title("Amber Wine Information")
-        elif button5:
+        elif wine_type == "DESSERT WINE":
             st.title("Dessert Wine Information")
-        elif button6:
+        elif wine_type == "SPARKLING WINE":
             st.title("Sparkling Wine Information")
-            
-            
+
+

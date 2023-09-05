@@ -9,7 +9,7 @@ def red_intro():
     st.write("Red Wine is made from dark-colored grape varieties and derives its distinct hue from the grape skins during the fermentation process. Red wines come in a wide range of styles, flavors, and aromas, influenced by factors like grape type, winemaking techniques, and the region of origin. Whether you're savoring a bold Cabernet Sauvignon, a smooth Merlot, or a delicate Pinot Noir, red wine offers a complex spectrum of tastes, from fruity and floral notes to earthy and spicy undertones. It is often celebrated for its ability to enhance the dining experience, pairing beautifully with a variety of foods, making it a versatile and beloved choice among wine enthusiasts worldwide.")
 
 def cab():
-    st.title("Cabernet Sauvignon")
+    st.title("**Cabernet Sauvignon**")
     cab_image = Image.open('cab.jpg')
     image_placeholder = st.empty()
     caption_placeholder = st.empty() 
@@ -31,7 +31,7 @@ def cab():
     st.write("Cabernet Sauvignon pairs exceptionally well with rich and hearty dishes. Its bold structure and flavors complement red meat like steak and lamb, making it an ideal choice for grilled or roasted meats. Additionally, it harmonizes with strong cheeses, dark chocolate, and dishes featuring earthy herbs and spices.")
 
 def merlot():
-    st.title("Merlot")
+    st.title("**Merlot**")
     merlot_image = Image.open('merlot.jpg')
     image_placeholder = st.empty()
     caption_placeholder = st.empty() 
@@ -51,3 +51,25 @@ def merlot():
     st.write("")
     st.write("**Food Pairing:**")
     st.write("Merlot's versatile and approachable nature makes it a great match for a variety of dishes. It pairs wonderfully with roasted or grilled meats, such as lamb or pork, as well as pasta dishes with tomato-based sauces. Soft cheeses, mushrooms, and dishes featuring herbs like rosemary also complement Merlot's fruit-forward flavors.")
+
+def shiraz():
+    st.title("**Shiraz(Syrah)**")
+    shiraz_image = Image.open('shiraz.jpg')
+    image_placeholder = st.empty()
+    caption_placeholder = st.empty() 
+    image_placeholder.image(shiraz_image, caption='Image by barmalini', use_column_width=True)
+    st.write("**Style & Structure:**")
+    st.write("Shiraz, known as Syrah in many parts of the world, offers a bold and robust style with a rich structure. It typically presents dark fruit flavors like blackberry, plum, and black cherry, often accompanied by notes of pepper, spice, and sometimes even smoky or earthy undertones. Shiraz wines are full-bodied with moderate to high tannins, providing a firm structure. Depending on the region and winemaking techniques, they can range from fruit-forward and approachable to more complex and age-worthy. Shiraz is celebrated for its ability to express terroir, resulting in diverse styles worldwide, such as Australia's big and fruit-driven Shiraz or Northern Rhône's more elegant and peppery Syrah.")
+    st.write("")
+    st.write("**Wine Region:**")
+    st.write("1. Rhône Valley, France: The Northern Rhône, particularly the appellations of Hermitage, Côte-Rôtie, and Cornas, is renowned for producing elegant and peppery Syrah wines. The Southern Rhône also contributes to Rhône blends with Syrah in wines like Châteauneuf-du-Pape.")
+    st.write("2. Barossa Valley, Australia: Australia, and especially the Barossa Valley in South Australia, is known for its bold and fruit-forward Shiraz wines. These wines often exhibit intense black fruit flavors, along with spice and chocolate notes.")
+    st.write("3. McLaren Vale, Australia: Another Australian region famous for Shiraz, McLaren Vale produces rich and full-bodied expressions of the grape.")
+    st.write("4. Napa Valley, California, USA: While primarily known for Cabernet Sauvignon, Napa Valley also produces high-quality Syrah wines, particularly in regions like Napa and Sonoma.")
+    st.write("5. Stellenbosch, South Africa: South Africa, particularly Stellenbosch, is gaining recognition for its Syrah wines, which often feature a unique combination of New World fruitiness and Old World elegance.")
+    st.write("6. Central Otago, New Zealand: This region in New Zealand is known for producing cool-climate Syrah with vibrant red fruit flavors and a spicy character.")
+    st.write("7. Chile: Various Chilean regions, including Colchagua Valley and Maipo Valley, produce excellent Syrah wines with a focus on balance and terroir expression.")
+    st.write("8. Washington State, USA: Washington State's Columbia Valley is gaining acclaim for its Syrah wines, which showcase dark fruit flavors and a structured profile.")
+    st.write("")
+    st.write("**Food Pairing:**")
+    st.write("Shiraz pairs wonderfully with hearty, flavorful dishes. Its bold character complements grilled or roasted meats, especially beef and lamb. The wine's dark fruit and spice notes harmonize with barbecue, game meats, and spicy cuisine. It also pairs well with strong cheeses, making it a versatile choice for a variety of flavorful dishes.")
