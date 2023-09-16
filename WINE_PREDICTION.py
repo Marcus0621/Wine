@@ -7,7 +7,7 @@ from keras.callbacks import EarlyStopping
 from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-
+from keras.layers import Dense
 
 def wine_quality_prediction():
   st.title("Wine Quality Prediction")
