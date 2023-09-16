@@ -1,17 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from PIL import Image
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import GridSearchCV
 from keras.models import Sequential
 from keras.utils import to_categorical
 from keras.callbacks import EarlyStopping
 from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from keras.layers import Dense,Dropout
-from keras.optimizers import Adam
+
 
 def wine_quality_prediction():
   st.title("Wine Quality Prediction")
