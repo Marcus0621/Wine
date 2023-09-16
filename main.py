@@ -4,7 +4,7 @@ import streamlit as st
 from TYPES_OF_WINE import display_wine_types
 from HOMEPAGE import display_homepage, what_is_wine
 from MAKING_PROCESS import making_process
-from PREDICTION import wine_quality_prediction
+from WINE_PREDICTION import wine_quality_prediction
 
 # Create a sidebar navigation option
 selected_page = st.sidebar.radio("**Select Page**", ("📚Home Page", "🍇Making Process", "🍷Types of Wine", "📈Wine Quality Prediction"))
