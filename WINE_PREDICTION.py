@@ -4,12 +4,12 @@ def wine_quality_prediction():
   import pandas as pd
   import numpy as np
   # from keras.models import Sequential
-  from keras.utils import to_categorical
+  # from keras.utils import to_categorical
   # from keras.callbacks import EarlyStopping
   from imblearn.over_sampling import SMOTE
   from sklearn.model_selection import train_test_split
   from sklearn.preprocessing import StandardScaler
-  from keras.layers import Dense
+  # from keras.layers import Dense
   from sklearn.ensemble import RandomForestClassifier
   
   st.title("Wine Quality Prediction")
@@ -210,8 +210,11 @@ def wine_quality_prediction():
   X_test= scaler.transform(X_test)
 
   #one-hot encoding
-  y_train_encoded = to_categorical(y_train)
-  y_test_encoded = to_categorical(y_test)
+  # y_train_encoded = to_categorical(y_train)
+  # y_test_encoded = to_categorical(y_test)
+
+  y_train_encoded = pd.get_dummies(y_train)
+  y_test_encoded = pd.get_dummies(y_test)
 
   def user_report():
     fixed_acidity = st.slider('Fixed Acidity', 4.6, 13.3, 0.0)
