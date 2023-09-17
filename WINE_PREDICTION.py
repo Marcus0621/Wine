@@ -3,14 +3,13 @@ def wine_quality_prediction():
   import streamlit as st
   import pandas as pd
   import numpy as np
-  # from keras.models import Sequential
-  # from keras.utils import to_categorical
-  # from keras.callbacks import EarlyStopping
+  from keras.models import Sequential
+  from keras.utils import to_categorical
+  from keras.callbacks import EarlyStopping
   from imblearn.over_sampling import SMOTE
   from sklearn.model_selection import train_test_split
   from sklearn.preprocessing import StandardScaler
-  # from keras.layers import Dense
-  from sklearn.ensemble import RandomForestClassifier
+  from keras.layers import Dense
   
   st.title("Wine Quality Prediction")
   st.write("wine quality prediction system employs a state-of-the-art Artificial Neural Network (ANN) model to assess and forecast wine quality. With an impressive accuracy rate of 92%, this predictive model is finely tuned to analyze a plethora of wine attributes and characteristics. By examining factors such as acidity, alcohol content, pH levels, and more, our ANN model provides precise insights into wine quality. Whether you're a winemaker striving for excellence or a wine enthusiast seeking exceptional choices, our system offers dependable predictions that guide your selection process with confidence. Explore the world of wine with data-driven precision and elevate your wine experience to new heights.")
@@ -210,11 +209,8 @@ def wine_quality_prediction():
   X_test= scaler.transform(X_test)
 
   #one-hot encoding
-  # y_train_encoded = to_categorical(y_train)
-  # y_test_encoded = to_categorical(y_test)
-
-  y_train_encoded = pd.get_dummies(y_train)
-  y_test_encoded = pd.get_dummies(y_test)
+  y_train_encoded = to_categorical(y_train)
+  y_test_encoded = to_categorical(y_test)
 
   def user_report():
     fixed_acidity = st.slider('Fixed Acidity', 4.6, 13.3, 0.0)
@@ -245,43 +241,37 @@ def wine_quality_prediction():
 
   user_data = user_report()
 
-  # #building the sequential model
-  # #L1 is first hidden layers, L2 is second hidden layers
-  # L1=100
-  # L2=100
+  #building the sequential model
+  #L1 is first hidden layers, L2 is second hidden layers
+  L1=100
+  L2=100
 
-  # ann = Sequential()
-  # ann.add(Dense(L1,input_dim=10,activation='relu'))
-  # ann.add(Dense(L2,activation='relu'))
-  # ann.add(Dense(3,activation='softmax'))
+  ann = Sequential()
+  ann.add(Dense(L1,input_dim=10,activation='relu'))
+  ann.add(Dense(L2,activation='relu'))
+  ann.add(Dense(3,activation='softmax'))
 
-  # # compiling the sequential model
-  # ann.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='adam')
+  # compiling the sequential model
+  ann.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='adam')
 
-  # #Implement early stopping
-  # early_stopping_monitor = EarlyStopping(patience=5)
+  #Implement early stopping
+  early_stopping_monitor = EarlyStopping(patience=5)
 
-  # history = ann.fit(X_train, y_train_encoded, epochs=300, batch_size=300,
-  #                     validation_data=(X_test, y_test_encoded),
-  #                     callbacks=[early_stopping_monitor])
+  history = ann.fit(X_train, y_train_encoded, epochs=300, batch_size=300,
+                      validation_data=(X_test, y_test_encoded),
+                      callbacks=[early_stopping_monitor])
 
-  # #building the sequential model
-  # #L1 is first hidden layers, L2 is second hidden layers
-  # L1=100
-  # L2=100
+  #building the sequential model
+  #L1 is first hidden layers, L2 is second hidden layers
+  L1=100
+  L2=100
 
-  # ann = Sequential()
-  # ann.add(Dense(L1,input_dim=10,activation='relu'))
-  # ann.add(Dense(L2,activation='relu'))
-  # ann.add(Dense(3,activation='softmax'))
+  ann = Sequential()
+  ann.add(Dense(L1,input_dim=10,activation='relu'))
+  ann.add(Dense(L2,activation='relu'))
+  ann.add(Dense(3,activation='softmax'))
 
-  #Creating Random Forest Model
-  rf_model = RandomForestClassifier(random_state=50)
-
-  # train the random model
-  rf_model.fit(X_train, y_train_encoded)
-
-  user_result = rf_model.predict(user_data)
+  user_result = ann.predict(user_data)
   st.subheader('Your Report: ')
   output = ''
 
