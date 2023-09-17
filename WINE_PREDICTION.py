@@ -3,9 +3,9 @@ def wine_quality_prediction():
   import streamlit as st
   import pandas as pd
   import numpy as np
-  from keras.models import Sequential
+  # from keras.models import Sequential
   from keras.utils import to_categorical
-  from keras.callbacks import EarlyStopping
+  # from keras.callbacks import EarlyStopping
   from imblearn.over_sampling import SMOTE
   from sklearn.model_selection import train_test_split
   from sklearn.preprocessing import StandardScaler
