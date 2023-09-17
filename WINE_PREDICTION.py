@@ -1,15 +1,16 @@
-import streamlit as st
-import pandas as pd
-import numpy as np
-from keras.models import Sequential
-from keras.utils import to_categorical
-from keras.callbacks import EarlyStopping
-from imblearn.over_sampling import SMOTE
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from keras.layers import Dense
 
 def wine_quality_prediction():
+  import streamlit as st
+  import pandas as pd
+  import numpy as np
+  from keras.models import Sequential
+  from keras.utils import to_categorical
+  from keras.callbacks import EarlyStopping
+  from imblearn.over_sampling import SMOTE
+  from sklearn.model_selection import train_test_split
+  from sklearn.preprocessing import StandardScaler
+  from keras.layers import Dense
+  
   st.title("Wine Quality Prediction")
   st.write("wine quality prediction system employs a state-of-the-art Artificial Neural Network (ANN) model to assess and forecast wine quality. With an impressive accuracy rate of 92%, this predictive model is finely tuned to analyze a plethora of wine attributes and characteristics. By examining factors such as acidity, alcohol content, pH levels, and more, our ANN model provides precise insights into wine quality. Whether you're a winemaker striving for excellence or a wine enthusiast seeking exceptional choices, our system offers dependable predictions that guide your selection process with confidence. Explore the world of wine with data-driven precision and elevate your wine experience to new heights.")
 
