@@ -4,7 +4,7 @@ import streamlit as st
 from TYPES_OF_WINE import display_wine_types
 from HOMEPAGE import display_homepage, what_is_wine
 from MAKING_PROCESS import making_process
-from WINE_PREDICTION import wine_quality_prediction
+from DATA_MINING import display_wine_insights
 
 # Create a sidebar navigation option
 selected_page = st.sidebar.radio("**Select Page**", ("📚Home Page", "🍇Making Process", "🍷Types of Wine", "📈Wine Quality Prediction"))
@@ -18,4 +18,4 @@ elif selected_page == "🍇Making Process":
 elif selected_page == "🍷Types of Wine":
     display_wine_types()
 elif selected_page == "📈Wine Quality Prediction":
-    wine_quality_prediction()
+    display_wine_insights()
