@@ -1,8 +1,8 @@
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-
 def data_visualisation():
+    import streamlit as st
+    import pandas as pd
+    import plotly.express as px
+    
     wine_data = pd.read_csv('winequality-red.csv')
 
     clean_data = wine_data.drop("residual sugar", axis = 1)
